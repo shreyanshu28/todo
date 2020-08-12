@@ -71,10 +71,10 @@ input[type="text"] {
     /* width: 500px; */
     width: 50%;
   }
-}
 
-button {
-  visibility: hidden;
+  button {
+    visibility: hidden;
+  }
 }
 
 button:hover {
