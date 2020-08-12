@@ -1,6 +1,6 @@
 body {
-  background-color: #43dde6;
-  color: #fc5185;
+  background-color: #eeeeee;
+  color: #333333;
 }
 
 header {
@@ -22,6 +22,7 @@ input[type="text"] {
 .label-name {
   font-size: 30px;
   font-weight: bold;
+  color: #364f6b;
 }
 
 @media (max-width: 600px) {
@@ -37,6 +38,17 @@ input[type="text"] {
     font-size: 30px;
     line-height: 1.5;
     padding-left: 10px;
+    box-shadow: 2px 2px 2px rgb(187, 169, 169);
+    margin: 10px;
+  }
+
+  button {
+    visibility: visible;
+    background-color: #3a3264;
+  }
+
+  .fa-trash {
+    color: #d0d6e2;
   }
 
   .label-name {
@@ -74,6 +86,11 @@ input[type="text"] {
 
   button {
     visibility: hidden;
+    background-color: #e0f2ff;
+  }
+
+  .fa-trash {
+    color: #333333;
   }
 }
 
@@ -91,43 +108,26 @@ ul li {
   transition-timing-function: ease-in;
 }
 
-ul li:nth-child(odd):hover {
-  background: #f0e40c;
+ul li:hover {
+  background: #364f6b;
   transform: scale(1.1);
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
-}
-
-ul li:nth-child(even):hover {
-  background: #ec0945;
-  transform: scale(1.1);
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
+  color: #e0f2ff;
 }
 
 ul li:hover button {
   visibility: visible;
 }
 
-li:nth-child(odd) {
-  background-color: #faee1c;
-  color: #581b98;
-  margin: 5px;
-}
-
-li:nth-child(even) {
-  background-color: #ff1f5a;
-  color: #c4def0;
+li {
+  box-shadow: 2px 2px 2px rgb(201, 168, 168);
+  color: #3a3264;
   margin: 5px;
 }
 
 button {
   margin: 2%;
   float: right;
-  background-color: darkviolet;
   cursor: pointer;
-}
-
-.fa-trash {
-  color: darkorange;
 }
