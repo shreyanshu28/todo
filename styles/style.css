@@ -11,12 +11,6 @@ header {
   color: #e0f2ff;
 }
 
-.input {
-  /* margin-left: 500px;
-  margin-top: 100px; */
-  margin-left: 34%;
-}
-
 input[type="text"] {
   font-size: x-large;
   color: #574b90;
@@ -30,19 +24,47 @@ input[type="text"] {
   font-weight: bold;
 }
 
-.input-field {
-  /* width: 500px; */
-  width: 50%;
+@media (max-width: 600px) {
+  .center-list {
+    text-align: start;
+  }
+
+  .list {
+    padding-left: 0;
+  }
+
+  .label-name {
+    text-align: center;
+  }
 }
 
-.list {
-  padding-top: 30px;
-  font-size: 30px;
-  padding-left: 0px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
-  text-indent: 10px;
+@media (min-width: 601px) {
+  .list {
+    padding-top: 30px;
+    font-size: 30px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-indent: 10px;
+  }
+
+  .center-list {
+    /* margin-left: 500px;
+  margin-right: 500px; */
+    margin-left: 34%;
+    width: 34%;
+  }
+
+  .input {
+    /* margin-left: 500px;
+    margin-top: 100px; */
+    margin-left: 34%;
+  }
+  .input-field {
+    /* width: 500px; */
+    width: 50%;
+  }
 }
 
 button {
@@ -91,13 +113,6 @@ li:nth-child(even) {
   background-color: #ff1f5a;
   color: #c4def0;
   margin: 5px;
-}
-
-.center-list {
-  /* margin-left: 500px;
-  margin-right: 500px; */
-  margin-left: 34%;
-  width: 34%;
 }
 
 button {
