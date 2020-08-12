@@ -45,12 +45,40 @@ input[type="text"] {
   text-indent: 10px;
 }
 
+button {
+  visibility: hidden;
+}
+
 button:hover {
-  pointer: cursor;
+  cursor: pointer;
 }
 
 ul {
   list-style: none;
+}
+
+ul li {
+  transform: scale(1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+ul li:nth-child(odd):hover {
+  background: #f0e40c;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+ul li:nth-child(even):hover {
+  background: #ec0945;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+ul li:hover button {
+  visibility: visible;
 }
 
 li:nth-child(odd) {
