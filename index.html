@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <title>To-Do</title>
+  </head>
+  <body onload="getData()">
+    <header>To-Do</header>
+    <div class="input">
+      <!-- label for="input" class="label-name">Add Your Ideas</!-->
+      <p class="label-name">Add Your Ideas</p>
+      <input
+        type="text"
+        onkeypress="addData(event)"
+        class="input-field"
+        id="input-field"
+      />
+      <input type="submit" value="submit" style="display: none;" />
+    </div>
+    <div class="center-list">
+      <ul class="list" id="ul"></ul>
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>
