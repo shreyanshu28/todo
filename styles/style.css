@@ -35,11 +35,16 @@ input[type="text"] {
   }
 
   li {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.5;
     padding-left: 10px;
     box-shadow: 2px 2px 2px rgb(187, 169, 169);
     margin: 10px;
+    margin-left: 0px;
+  }
+
+  [data-theme="dark"] li {
+    font-style: bold;
   }
 
   button {
@@ -52,7 +57,12 @@ input[type="text"] {
   }
 
   .label-name {
+    margin-top: 0;
     text-align: center;
+  }
+
+  .input {
+    margin-top: 20px;
   }
 }
 
@@ -92,6 +102,10 @@ input[type="text"] {
   .fa-trash {
     color: #333333;
   }
+
+  li {
+    margin: 5px;
+  }
 }
 
 button:hover {
@@ -123,11 +137,92 @@ ul li:hover button {
 li {
   box-shadow: 2px 2px 2px rgb(201, 168, 168);
   color: #3a3264;
-  margin: 5px;
 }
 
 button {
   margin: 2%;
   float: right;
   cursor: pointer;
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  background-color: rgb(8, 1, 39);
+  color: blanchedalmond;
+}
+
+[data-theme="dark"] li {
+  color: hsla(200, 0%, 0%, 0.7);
+  background-color: blanchedalmond;
+}
+
+[data-theme="dark"] header {
+  margin-top: 20px;
+  background-color: #eeeeee;
+  text-align: center;
+  font-size: 50px;
+  color: #364f6b;
+}
+
+[data-theme="dark"] .label-name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #dbdee2;
+}
+
+.check {
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px; */
+  /* font-size: 30px;  */
+  /* width: 70px; */
+  display: flex;
+  justify-content: space-around;
+  /* display: flex;
+  justify-content: center;
+  box-sizing: border-box; */
+}
+
+.switch-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.switch-input:checked + .switch-label .ball {
+  transform: translateX(24px);
+}
+
+.switch-label {
+  height: 26px;
+  width: 50px;
+  background-color: #2e2848;
+  display: flex;
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.fa-moon {
+  padding-left: 5px;
+  color: #f1c40f;
+}
+
+.fa-sun {
+  padding-right: 5px;
+  color: #f39c12;
+}
+
+.ball {
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  background-color: #ffffff;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
 }

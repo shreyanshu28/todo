@@ -13,10 +13,21 @@
     <title>Notes App</title>
   </head>
   <body onload="getData()">
-    <header>Notes</header>
+    <header>
+      Notes
+    </header>
     <div class="input">
+      <div class="check">
+        <input type="checkbox" class="switch-input" id="themeSwitch" />
+        <label class="switch-label" for="themeSwitch">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+        <p class="label-name">Add Your Ideas</p>
+      </div>
       <!-- label for="input" class="label-name">Add Your Ideas</!-->
-      <p class="label-name">Add Your Ideas</p>
+      <!-- <p class="label-name">Add Your Ideas</p> -->
       <input
         type="text"
         onkeypress="addData(event)"
