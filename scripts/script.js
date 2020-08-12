@@ -19,9 +19,11 @@ function addData(event) {
 
     document.getElementById("input-field").value = "";
 
+    console.log(`AddData Called ${text}`);
     lists.push(text);
+    list.push(text);
     localStorage.setItem("lists", JSON.stringify(lists));
-    console.log(`AddData Called ${lists}`);
+    localStorage.setItem("lists", JSON.stringify(list));
   }
 }
 
@@ -43,15 +45,47 @@ function ButtClick() {
 
     val = event.target;
     // let tgt = event.target.parentElement;
-    let name = event.target.parentElement.tagName;
+    let name = val.parentElement.tagName;
     console.log("PARENT ELEMENT : " + `${name}`);
     if (name === "LI") {
       val.parentElement.remove();
+      // removeItem(val);
+      let idx = lists.indexOf(val.parentElement.textContent);
+      list.splice(idx, 1);
+      localStorage.setItem("lists", JSON.stringify(list));
     } else if (name === "BUTTON") {
       val.parentElement.parentElement.remove();
+      // removeItem(val);
+      let idx = lists.indexOf(val.parentElement.parentElement.textContent);
+      list.splice(idx, 1);
+      localStorage.setItem("lists", JSON.stringify(list));
     }
   });
 }
+
+ButtClick();
+
+// function removeItem(e) {
+//   console.log(
+//     `name of tag ${e}     value of e   ${e.parentElement.parentElement.textContent}`
+//   );
+//   let text = e.parentElement.parentElement.textContent;
+//   let idx = lists.indexOf(text);
+//   console.log(`remove item ${text}`);
+//   list.splice(idx, 1);
+//   localStorage.setItem("lists", JSON.stringify(list));
+// }
+
+// function removeItem(e) {
+//   console.log(
+//     `name of tag ${e}     value of e   ${e.parentElement.parentElement.textContent}`
+//   );
+//   let text = e.parentElement.parentElement.textContent;
+//   let idx = lists.indexOf(text);
+//   console.log(`remove item ${text}`);
+//   list.splice(idx, 1);
+//   localStorage.setItem("lists", JSON.stringify(list));
+// }
 
 // function deleteList(val) {
 //   console.log("parent element " + val.parentElement.tagName);
@@ -64,8 +98,6 @@ function ButtClick() {
 //     val.parentElement.parentElement.remove();
 //   }
 // }
-
-ButtClick();
 
 // document.getElementById("ul").addEventListener("click", function (e) {
 //   let tgt = e.target;
