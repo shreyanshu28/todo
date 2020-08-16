@@ -77,6 +77,11 @@ input[type="text"] {
     text-indent: 10px;
   }
 
+  .label-name {
+    margin-top: 0;
+    margin-left: 90px;
+  }
+
   .center-list {
     /* margin-left: 500px;
   margin-right: 500px; */
@@ -179,7 +184,8 @@ button {
   /* font-size: 30px;  */
   /* width: 70px; */
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding-top: 10px;
   /* display: flex;
   justify-content: center;
   box-sizing: border-box; */
